@@ -1,0 +1,25 @@
+<label >Username : <input type="text" [(ngModel)]="name" /> </label><br>
+<button (click)="ajout()" [disabled]="!name" >Ajouter</button><br>
+<table *ngIf="etudiants.length > 0" border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of etudiants;let index = index">
+        <td >{{ i.id }}</td>
+        <td>{{ i.name }}</td>
+        <td><button (click)="modify(i)" >badel</button><button (click)="delet(i)" >fasse5</button><button (click)="details(i)" >details</button></td>
+        
+      </tr>
+      
+      <tr>
+        
+      </tr>
+    </tbody>
+  </table>
+  <p>{{message1}}</p>
+  <p>{{message2}}</p>
